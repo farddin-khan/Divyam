@@ -114,8 +114,20 @@ export default function Footer() {
                 <a href="mailto:care@divyamayurveda.com" className="text-white/70 text-sm hover:text-secondary transition-colors">care@divyamayurveda.com</a>
               </li>
             </ul>
+
+            {/* Avilable on Social Media */}
+            <span className="flex items-center gap-2 mt-5">
+          <div>
+            <h4>Also available on:</h4>
+            <div className="flex items-center gap-2 mt-2">
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/products/Amazon.png" alt="Social" className="h-12 w-12 object-contain rounded-xl mr-2"/></a>
+                <a href="#" target="_blank" rel="noopener noreferrer"><img src="/images/products/Flipkart.png" alt="Social" className="h-12 w-12 object-contain rounded-xl mr-2"/></a>
+                <a href="https://www.meesho.com/DIVYAMAYURVEDA" target="_blank" rel="noopener noreferrer"><img src="/images/products/Meeso.png" alt="Social" className="h-12 w-12 object-contain rounded-xl mr-2"/></a>
+            </div>
           </div>
-        </div>
+          </span>
+          </div>
+          </div>
       </div>
 
       {/* Bottom Bar */}

@@ -1,7 +1,10 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
 import { CartProvider } from './hooks/useCart.jsx';
+
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
+
 import Home from './pages/Home';
 import Shop from './pages/Shop';
 import ProductDetail from './pages/ProductDetail';
@@ -22,12 +25,13 @@ import Login from './pages/Login';
 import Signup from './pages/Signup';
 import TrackOrder from './pages/TrackOrder';
 
-function App() {
+export default function App() {
   return (
     <CartProvider>
       <BrowserRouter>
         <div className="min-h-screen bg-cream">
           <Navbar />
+
           <main>
             <Routes>
               <Route path="/" element={<Home />} />
@@ -44,19 +48,20 @@ function App() {
               <Route path="/shipping" element={<Shipping />} />
               <Route path="/privacy-policy" element={<PrivacyPolicy />} />
               <Route path="/terms" element={<Terms />} />
-              <Route path="/admin" element={<AdminOrders />} />
-              <Route path="/admin/orders" element={<AdminOrders />} />
-              <Route path="/admin/products" element={<AdminProducts />} />
               <Route path="/contact" element={<Contact />} />
               <Route path="/login" element={<Login />} />
               <Route path="/signup" element={<Signup />} />
+
+              {/* Admin */}
+              <Route path="/admin" element={<AdminOrders />} />
+              <Route path="/admin/orders" element={<AdminOrders />} />
+              <Route path="/admin/products" element={<AdminProducts />} />
             </Routes>
           </main>
+
           <Footer />
         </div>
       </BrowserRouter>
     </CartProvider>
   );
 }
-
-export default App;
